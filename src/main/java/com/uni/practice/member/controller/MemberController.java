@@ -25,5 +25,4 @@ public class MemberController {
         return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "조회 성공", memberService.selectMyInfo(memberId)));
     }
 
-
 }
