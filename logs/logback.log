@@ -1,0 +1,632 @@
+[2023-01-25 15:02:40:543][restartedMain] INFO  c.uni.practice.PracticeApplication - Starting PracticeApplication using Java 11.0.16.1 on spaceui-MacBookPro.local with PID 81839 (/Users/space/edu/restAPI/practice/build/classes/java/main started by leeyounghyun in /Users/space/edu/restAPI/practice)
+[2023-01-25 15:02:40:544][restartedMain] INFO  c.uni.practice.PracticeApplication - No active profile set, falling back to 1 default profile: "default"
+[2023-01-25 15:02:40:576][restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/oraclepki.jar
+[2023-01-25 15:02:40:576][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-01-25 15:02:40:577][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-01-25 15:02:41:1540][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8091 (http)
+[2023-01-25 15:02:41:1548][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+[2023-01-25 15:02:41:1549][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-01-25 15:02:41:1549][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+[2023-01-25 15:02:41:1598][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-01-25 15:02:41:1598][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1021 ms
+[2023-01-25 15:02:41:1842][restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/configuration/SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tokenProvider' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/exception/jwt/TokenProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/service/CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/dao/MemberMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+[2023-01-25 15:02:41:1845][restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[2023-01-25 15:02:41:1858][restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2023-01-25 15:02:41:1883][restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/configuration/SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tokenProvider' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/exception/jwt/TokenProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/service/CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/dao/MemberMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.uni.practice.PracticeApplication.main(PracticeApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tokenProvider' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/exception/jwt/TokenProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/service/CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/dao/MemberMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/service/CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/dao/MemberMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/dao/MemberMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 52 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330)
+	... 66 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 76 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 90 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:615)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:492)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:635)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:187)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5460a116.CGLIB$sqlSessionFactory$2(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5460a116$$FastClassBySpringCGLIB$$6e44795c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5460a116.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 91 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MemberDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MemberDto
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613)
+	... 104 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MemberDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MemberDto
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:102)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:138)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:131)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121)
+	... 106 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MemberDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MemberDto
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:128)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 110 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: MemberDto
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:196)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:124)
+	... 112 common frames omitted
+[2023-01-25 15:04:40:615][restartedMain] INFO  c.uni.practice.PracticeApplication - Starting PracticeApplication using Java 11.0.16.1 on spaceui-MacBookPro.local with PID 82101 (/Users/space/edu/restAPI/practice/build/classes/java/main started by leeyounghyun in /Users/space/edu/restAPI/practice)
+[2023-01-25 15:04:40:616][restartedMain] INFO  c.uni.practice.PracticeApplication - No active profile set, falling back to 1 default profile: "default"
+[2023-01-25 15:04:40:652][restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/oraclepki.jar
+[2023-01-25 15:04:40:652][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-01-25 15:04:40:652][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-01-25 15:04:41:1518][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8091 (http)
+[2023-01-25 15:04:41:1525][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+[2023-01-25 15:04:41:1525][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-01-25 15:04:41:1526][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+[2023-01-25 15:04:41:1569][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-01-25 15:04:41:1569][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 916 ms
+[2023-01-25 15:04:41:1788][restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/configuration/SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tokenProvider' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/exception/jwt/TokenProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/service/CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/dao/MemberMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+[2023-01-25 15:04:41:1790][restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[2023-01-25 15:04:41:1803][restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2023-01-25 15:04:41:1826][restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/configuration/SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tokenProvider' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/exception/jwt/TokenProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/service/CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/dao/MemberMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.uni.practice.PracticeApplication.main(PracticeApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tokenProvider' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/exception/jwt/TokenProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/service/CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/dao/MemberMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/service/CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/dao/MemberMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'memberMapper' defined in file [/Users/space/edu/restAPI/practice/build/classes/java/main/com/uni/practice/member/dao/MemberMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 52 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330)
+	... 66 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 76 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 90 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:615)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:492)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:635)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:187)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$9a2df82.CGLIB$sqlSessionFactory$0(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$9a2df82$$FastClassBySpringCGLIB$$3c9723f8.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$9a2df82.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 91 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/space/edu/restAPI/practice/build/resources/main/mybatis/mapper/MemberMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MemberDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MemberDto
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613)
+	... 104 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MemberDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MemberDto
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:102)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:138)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:131)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121)
+	... 106 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'MemberDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: MemberDto
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:128)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 110 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: MemberDto
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:196)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:124)
+	... 112 common frames omitted
+[2023-01-25 15:07:14:795][restartedMain] INFO  c.uni.practice.PracticeApplication - Starting PracticeApplication using Java 11.0.16.1 on spaceui-MacBookPro.local with PID 82433 (/Users/space/edu/restAPI/practice/build/classes/java/main started by leeyounghyun in /Users/space/edu/restAPI/practice)
+[2023-01-25 15:07:14:796][restartedMain] INFO  c.uni.practice.PracticeApplication - No active profile set, falling back to 1 default profile: "default"
+[2023-01-25 15:07:14:848][restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/oraclepki.jar
+[2023-01-25 15:07:14:849][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-01-25 15:07:14:849][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-01-25 15:07:15:1801][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8091 (http)
+[2023-01-25 15:07:15:1810][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+[2023-01-25 15:07:15:1810][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-01-25 15:07:15:1810][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+[2023-01-25 15:07:15:1860][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-01-25 15:07:15:1860][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1010 ms
+[2023-01-25 15:07:16:2276][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7b44623d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1666982, org.springframework.security.web.context.SecurityContextPersistenceFilter@134250eb, org.springframework.security.web.header.HeaderWriterFilter@42d3395f, org.springframework.web.filter.CorsFilter@2ce020c9, org.springframework.security.web.authentication.logout.LogoutFilter@5eb0485b, com.uni.practice.exception.jwt.JwtFilter@2f983c28, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c6c361d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48c14fb4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7795e66c, org.springframework.security.web.session.SessionManagementFilter@54285b0a, org.springframework.security.web.access.ExceptionTranslationFilter@4b3720aa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@588fa90]
+[2023-01-25 15:07:16:2279][restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/productimgs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-01-25 15:07:16:2279][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will not secure Ant [pattern='/productimgs/**']
+[2023-01-25 15:07:16:2520][restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+[2023-01-25 15:07:16:2534][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+[2023-01-25 15:07:16:2560][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8091 (http) with context path ''
+[2023-01-25 15:07:16:2571][restartedMain] INFO  c.uni.practice.PracticeApplication - Started PracticeApplication in 2.348 seconds (JVM running for 2.974)
+[2023-01-25 15:08:29:544][restartedMain] INFO  c.uni.practice.PracticeApplication - Starting PracticeApplication using Java 11.0.16.1 on spaceui-MacBookPro.local with PID 82601 (/Users/space/edu/restAPI/practice/build/classes/java/main started by leeyounghyun in /Users/space/edu/restAPI/practice)
+[2023-01-25 15:08:29:545][restartedMain] INFO  c.uni.practice.PracticeApplication - No active profile set, falling back to 1 default profile: "default"
+[2023-01-25 15:08:29:580][restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/oraclepki.jar
+[2023-01-25 15:08:29:581][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-01-25 15:08:29:581][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-01-25 15:08:30:1532][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8091 (http)
+[2023-01-25 15:08:30:1543][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+[2023-01-25 15:08:30:1544][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-01-25 15:08:30:1544][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+[2023-01-25 15:08:30:1596][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-01-25 15:08:30:1597][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1016 ms
+[2023-01-25 15:08:30:2096][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3d220bc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e24c112, org.springframework.security.web.context.SecurityContextPersistenceFilter@753d4f5b, org.springframework.security.web.header.HeaderWriterFilter@394cae4, org.springframework.web.filter.CorsFilter@785862a4, org.springframework.security.web.authentication.logout.LogoutFilter@37d50fb0, com.uni.practice.exception.jwt.JwtFilter@4333f94a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a97b7ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21c9eae8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51f6f650, org.springframework.security.web.session.SessionManagementFilter@4f01f9f5, org.springframework.security.web.access.ExceptionTranslationFilter@18897f4f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@693f7081]
+[2023-01-25 15:08:30:2119][restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/productimgs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-01-25 15:08:30:2119][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will not secure Ant [pattern='/productimgs/**']
+[2023-01-25 15:08:31:2406][restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+[2023-01-25 15:08:31:2421][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+[2023-01-25 15:08:31:2447][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8091 (http) with context path ''
+[2023-01-25 15:08:31:2458][restartedMain] INFO  c.uni.practice.PracticeApplication - Started PracticeApplication in 2.273 seconds (JVM running for 2.832)
+[2023-01-25 15:09:51:82627][http-nio-8091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-01-25 15:09:51:82628][http-nio-8091-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2023-01-25 15:09:51:82630][http-nio-8091-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+[2023-01-25 15:09:51:82650][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 15:09:51:82651][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 15:09:52:83496][http-nio-8091-exec-2] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 15:09:52:83496][http-nio-8091-exec-2] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 15:10:10:102271][http-nio-8091-exec-4] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 15:10:10:102272][http-nio-8091-exec-4] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 15:10:10:102356][http-nio-8091-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2023-01-25 15:10:11:102690][http-nio-8091-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2023-01-25 15:10:11:102701][http-nio-8091-exec-4] INFO  c.u.p.member.service.AuthService - [AuthService] Signup Start ===================================
+[2023-01-25 15:10:11:102701][http-nio-8091-exec-4] INFO  c.u.p.member.service.AuthService - [AuthService] MemberRequestDto MemberDto(memberCode=null, memberId=user01, memberName=user01, memberPassword=user01, memberRole=null, memberEmail=user01@naver.com, authorities=null)
+[2023-01-25 15:10:11:102939][http-nio-8091-exec-4] INFO  c.u.p.member.service.AuthService - [AuthService] Member Signup Start ==============================
+[2023-01-25 15:10:11:103034][http-nio-8091-exec-4] INFO  c.u.p.member.service.AuthService - [AuthService] Member MemberDto(memberCode=null, memberId=user01, memberName=user01, memberPassword=$2a$10$wpRoHMM178s3Q8XTKswDouTyvhmA/8gjcwUgzPokKvfiX0f6wwE.C, memberRole=null, memberEmail=user01@naver.com, authorities=null)
+[2023-01-25 15:10:11:103062][http-nio-8091-exec-4] INFO  c.u.p.member.service.AuthService - [AuthService] Member Insert Result 회원 가입 성공
+[2023-01-25 15:10:11:103062][http-nio-8091-exec-4] INFO  c.u.p.member.service.AuthService - [AuthService] Signup End ==============================
+[2023-01-25 15:12:36:247948][http-nio-8091-exec-9] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 15:12:36:247952][http-nio-8091-exec-9] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 15:12:36:247989][http-nio-8091-exec-9] INFO  c.u.p.member.service.AuthService - [AuthService] Signup Start ===================================
+[2023-01-25 15:12:36:247989][http-nio-8091-exec-9] INFO  c.u.p.member.service.AuthService - [AuthService] MemberRequestDto MemberDto(memberCode=null, memberId=admin, memberName=admin, memberPassword=admin, memberRole=null, memberEmail=admin@naver.com, authorities=null)
+[2023-01-25 15:12:36:248009][http-nio-8091-exec-9] INFO  c.u.p.member.service.AuthService - [AuthService] Member Signup Start ==============================
+[2023-01-25 15:12:36:248109][http-nio-8091-exec-9] INFO  c.u.p.member.service.AuthService - [AuthService] Member MemberDto(memberCode=null, memberId=admin, memberName=admin, memberPassword=$2a$10$.6KLoxxaug/wnxWBQXu2UeMiF9ChYpHHjEE1wxaGYM1GrWFEzcSoC, memberRole=null, memberEmail=admin@naver.com, authorities=null)
+[2023-01-25 15:12:36:248114][http-nio-8091-exec-9] INFO  c.u.p.member.service.AuthService - [AuthService] Member Insert Result 회원 가입 성공
+[2023-01-25 15:12:36:248114][http-nio-8091-exec-9] INFO  c.u.p.member.service.AuthService - [AuthService] Signup End ==============================
+[2023-01-25 15:13:12:283779][http-nio-8091-exec-10] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 15:13:12:283779][http-nio-8091-exec-10] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 15:13:12:283784][http-nio-8091-exec-10] INFO  c.u.p.member.service.AuthService - [AuthService] Signup Start ===================================
+[2023-01-25 15:13:12:283785][http-nio-8091-exec-10] INFO  c.u.p.member.service.AuthService - [AuthService] MemberRequestDto MemberDto(memberCode=null, memberId=user01, memberName=회원01, memberPassword=user01, memberRole=null, memberEmail=user01@naver.com, authorities=null)
+[2023-01-25 15:13:12:283799][http-nio-8091-exec-10] INFO  c.u.p.member.service.AuthService - [AuthService] Member Signup Start ==============================
+[2023-01-25 15:13:12:283893][http-nio-8091-exec-10] INFO  c.u.p.member.service.AuthService - [AuthService] Member MemberDto(memberCode=null, memberId=user01, memberName=회원01, memberPassword=$2a$10$OGKlmhB8HQ1o.RVNh6C9KeeKku5bTwll0PDdtB8Qq0wUhBMmm41cu, memberRole=null, memberEmail=user01@naver.com, authorities=null)
+[2023-01-25 15:13:12:283898][http-nio-8091-exec-10] INFO  c.u.p.member.service.AuthService - [AuthService] Member Insert Result 회원 가입 성공
+[2023-01-25 15:13:12:283898][http-nio-8091-exec-10] INFO  c.u.p.member.service.AuthService - [AuthService] Signup End ==============================
+[2023-01-25 15:13:58:329986][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 15:13:58:329987][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 15:13:58:330030][http-nio-8091-exec-1] INFO  c.u.p.member.service.AuthService - [AuthService] Login Start ===================================
+[2023-01-25 15:13:58:330030][http-nio-8091-exec-1] INFO  c.u.p.member.service.AuthService - [AuthService] MemberDto(memberCode=null, memberId=admin, memberName=null, memberPassword=admin, memberRole=null, memberEmail=null, authorities=null)
+[2023-01-25 15:13:58:330218][http-nio-8091-exec-1] INFO  c.u.p.exception.jwt.TokenProvider - [TokenProvider] generateTokenDto Start ===================================
+[2023-01-25 15:13:58:330219][http-nio-8091-exec-1] INFO  c.u.p.exception.jwt.TokenProvider - [TokenProvider] ROLE_ADMIN
+[2023-01-25 15:13:58:330284][http-nio-8091-exec-1] INFO  c.u.p.member.service.AuthService - [AuthService] tokenDto TokenDto(grantType=bearer, memberName=관리자, accessToken=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE2NzQ2MjkwMzh9.zaqmMfsmlnYbGE4shNkpw_S66HgnYN-m1JvQJM01MMnz-jj9uGJUH546xH4VGw0mrlqAYZl0bVZacCtuHDQnMQ, accessTokenExpiresIn=1674629038846)
+[2023-01-25 15:13:58:330297][http-nio-8091-exec-1] INFO  c.u.p.member.service.AuthService - [AuthService] Login End ===================================
+[2023-01-25 15:14:25:356493][http-nio-8091-exec-2] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 15:14:25:356493][http-nio-8091-exec-2] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 15:16:36:487856][http-nio-8091-exec-5] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 15:16:36:487856][http-nio-8091-exec-5] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 15:16:36:487864][http-nio-8091-exec-5] INFO  c.u.p.member.service.AuthService - [AuthService] Login Start ===================================
+[2023-01-25 15:16:36:487865][http-nio-8091-exec-5] INFO  c.u.p.member.service.AuthService - [AuthService] MemberDto(memberCode=null, memberId=admin, memberName=null, memberPassword=admin, memberRole=null, memberEmail=null, authorities=null)
+[2023-01-25 15:16:36:487962][http-nio-8091-exec-5] INFO  c.u.p.exception.jwt.TokenProvider - [TokenProvider] generateTokenDto Start ===================================
+[2023-01-25 15:16:36:487962][http-nio-8091-exec-5] INFO  c.u.p.exception.jwt.TokenProvider - [TokenProvider] ROLE_ADMIN
+[2023-01-25 15:16:36:487965][http-nio-8091-exec-5] INFO  c.u.p.member.service.AuthService - [AuthService] tokenDto TokenDto(grantType=bearer, memberName=관리자, accessToken=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE2NzQ2MjkxOTZ9.aFIntqirwdGO5_bcpHB-uQDYOeZLVZcBaPDpLJqcAF5l7LOfjn8MOxGMPWs964cK2583yic1FXmDjr98VRtqBA, accessTokenExpiresIn=1674629196576)
+[2023-01-25 15:16:36:487965][http-nio-8091-exec-5] INFO  c.u.p.member.service.AuthService - [AuthService] Login End ===================================
+[2023-01-25 15:50:41:2533251][HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s835ms), soft-evicting connections from pool.
+[2023-01-25 16:56:26:6477655][http-nio-8091-exec-8] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 16:56:26:6477667][http-nio-8091-exec-8] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 16:56:26:6477765][http-nio-8091-exec-8] INFO  c.u.p.member.service.AuthService - [AuthService] Signup Start ===================================
+[2023-01-25 16:56:26:6477765][http-nio-8091-exec-8] INFO  c.u.p.member.service.AuthService - [AuthService] MemberRequestDto MemberDto(memberCode=null, memberId=admin, memberName=관리자, memberPassword=admin, memberRole=null, memberEmail=admin@gmail.com, authorities=null)
+[2023-01-25 16:56:26:6477810][http-nio-8091-exec-8] INFO  c.u.p.member.service.AuthService - [AuthService] Member Signup Start ==============================
+[2023-01-25 16:56:26:6477948][http-nio-8091-exec-8] INFO  c.u.p.member.service.AuthService - [AuthService] Member MemberDto(memberCode=null, memberId=admin, memberName=관리자, memberPassword=$2a$10$rM.6LHaFxvDWGgq.bqydx.E6M02NWT3p69fuNLWpfSfLaVudODqSG, memberRole=null, memberEmail=admin@gmail.com, authorities=null)
+[2023-01-25 16:56:26:6477984][http-nio-8091-exec-8] INFO  c.u.p.member.service.AuthService - [AuthService] Member Insert Result 회원 가입 성공
+[2023-01-25 16:56:26:6477984][http-nio-8091-exec-8] INFO  c.u.p.member.service.AuthService - [AuthService] Signup End ==============================
+[2023-01-25 16:56:39:6491282][http-nio-8091-exec-9] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 16:56:39:6491283][http-nio-8091-exec-9] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 16:56:39:6491292][http-nio-8091-exec-9] INFO  c.u.p.member.service.AuthService - [AuthService] Signup Start ===================================
+[2023-01-25 16:56:39:6491293][http-nio-8091-exec-9] INFO  c.u.p.member.service.AuthService - [AuthService] MemberRequestDto MemberDto(memberCode=null, memberId=user01, memberName=회원01, memberPassword=user01, memberRole=null, memberEmail=user01@gmail.com, authorities=null)
+[2023-01-25 16:56:39:6491298][http-nio-8091-exec-9] INFO  c.u.p.member.service.AuthService - [AuthService] Member Signup Start ==============================
+[2023-01-25 16:56:40:6491424][http-nio-8091-exec-9] INFO  c.u.p.member.service.AuthService - [AuthService] Member MemberDto(memberCode=null, memberId=user01, memberName=회원01, memberPassword=$2a$10$H1s/mwM1amyuc9/U5aGxCumU3.NY5X4Pz5kd4SVSXMVAUXUiuQ1pe, memberRole=null, memberEmail=user01@gmail.com, authorities=null)
+[2023-01-25 16:56:40:6491429][http-nio-8091-exec-9] INFO  c.u.p.member.service.AuthService - [AuthService] Member Insert Result 회원 가입 성공
+[2023-01-25 16:56:40:6491430][http-nio-8091-exec-9] INFO  c.u.p.member.service.AuthService - [AuthService] Signup End ==============================
+[2023-01-25 16:57:45:6557215][http-nio-8091-exec-2] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 16:57:45:6557215][http-nio-8091-exec-2] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 16:57:45:6557227][http-nio-8091-exec-2] INFO  c.u.p.member.service.AuthService - [AuthService] Signup Start ===================================
+[2023-01-25 16:57:45:6557228][http-nio-8091-exec-2] INFO  c.u.p.member.service.AuthService - [AuthService] MemberRequestDto MemberDto(memberCode=null, memberId=admin, memberName=관리자, memberPassword=admin, memberRole=null, memberEmail=admin@gmail.com, authorities=null)
+[2023-01-25 16:57:45:6557232][http-nio-8091-exec-2] INFO  c.u.p.member.service.AuthService - [AuthService] Member Signup Start ==============================
+[2023-01-25 16:57:45:6557359][http-nio-8091-exec-2] INFO  c.u.p.member.service.AuthService - [AuthService] Member MemberDto(memberCode=null, memberId=admin, memberName=관리자, memberPassword=$2a$10$CjmBeMLZPEFfxYuhi/F56edkfP7vMnGykJ0TKEFBj4leZmTvn/4r., memberRole=null, memberEmail=admin@gmail.com, authorities=null)
+[2023-01-25 16:57:45:6557367][http-nio-8091-exec-2] INFO  c.u.p.member.service.AuthService - [AuthService] Member Insert Result 회원 가입 성공
+[2023-01-25 16:57:45:6557368][http-nio-8091-exec-2] INFO  c.u.p.member.service.AuthService - [AuthService] Signup End ==============================
+[2023-01-25 16:57:54:6565996][http-nio-8091-exec-3] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 16:57:54:6565996][http-nio-8091-exec-3] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 16:57:54:6566002][http-nio-8091-exec-3] INFO  c.u.p.member.service.AuthService - [AuthService] Signup Start ===================================
+[2023-01-25 16:57:54:6566003][http-nio-8091-exec-3] INFO  c.u.p.member.service.AuthService - [AuthService] MemberRequestDto MemberDto(memberCode=null, memberId=user01, memberName=회원01, memberPassword=user01, memberRole=null, memberEmail=user01@gmail.com, authorities=null)
+[2023-01-25 16:57:54:6566005][http-nio-8091-exec-3] INFO  c.u.p.member.service.AuthService - [AuthService] Member Signup Start ==============================
+[2023-01-25 16:57:54:6566133][http-nio-8091-exec-3] INFO  c.u.p.member.service.AuthService - [AuthService] Member MemberDto(memberCode=null, memberId=user01, memberName=회원01, memberPassword=$2a$10$a6wSqG5EyHmf06ziU10rh.Adhcx2AXqRNFJcu.Rs4DHc4xLb6rmJW, memberRole=null, memberEmail=user01@gmail.com, authorities=null)
+[2023-01-25 16:57:54:6566137][http-nio-8091-exec-3] INFO  c.u.p.member.service.AuthService - [AuthService] Member Insert Result 회원 가입 성공
+[2023-01-25 16:57:54:6566137][http-nio-8091-exec-3] INFO  c.u.p.member.service.AuthService - [AuthService] Signup End ==============================
+[2023-01-25 17:01:52:6804223][http-nio-8091-exec-5] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:01:52:6804226][http-nio-8091-exec-5] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:01:53:6804514][http-nio-8091-exec-6] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:01:53:6804515][http-nio-8091-exec-6] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:04:13:6944538][http-nio-8091-exec-10] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:04:13:6944541][http-nio-8091-exec-10] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:04:13:6944610][http-nio-8091-exec-10] INFO  c.u.p.member.service.AuthService - [AuthService] Login Start ===================================
+[2023-01-25 17:04:13:6944612][http-nio-8091-exec-10] INFO  c.u.p.member.service.AuthService - [AuthService] MemberDto(memberCode=null, memberId=admin, memberName=null, memberPassword=admin, memberRole=null, memberEmail=null, authorities=null)
+[2023-01-25 17:04:13:6944842][http-nio-8091-exec-10] INFO  c.u.p.exception.jwt.TokenProvider - [TokenProvider] generateTokenDto Start ===================================
+[2023-01-25 17:04:13:6944843][http-nio-8091-exec-10] INFO  c.u.p.exception.jwt.TokenProvider - [TokenProvider] ROLE_ADMIN
+[2023-01-25 17:04:13:6944972][http-nio-8091-exec-10] INFO  c.u.p.member.service.AuthService - [AuthService] tokenDto TokenDto(grantType=bearer, memberName=관리자, accessToken=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE2NzQ2MzU2NTN9.3hRDEe5PCKDZeTzOv-0v8Ov1M2n_R_wj-8jTLwxg-L3228l4A_PdxwUOskR8B-0qzj1cwjlrcB2pRetghubdLQ, accessTokenExpiresIn=1674635653460)
+[2023-01-25 17:04:13:6944976][http-nio-8091-exec-10] INFO  c.u.p.member.service.AuthService - [AuthService] Login End ===================================
+[2023-01-25 17:04:17:6948755][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:04:17:6948756][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:04:17:6948764][http-nio-8091-exec-1] INFO  c.u.p.member.service.AuthService - [AuthService] Login Start ===================================
+[2023-01-25 17:04:17:6948764][http-nio-8091-exec-1] INFO  c.u.p.member.service.AuthService - [AuthService] MemberDto(memberCode=null, memberId=admin, memberName=null, memberPassword=1234, memberRole=null, memberEmail=null, authorities=null)
+[2023-01-25 17:04:17:6948889][http-nio-8091-exec-1] INFO  c.u.p.member.service.AuthService - [AuthService] Password Match Fail!!!!!!!!!!!!
+[2023-01-25 17:04:17:6949083][http-nio-8091-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.uni.practice.exception.LoginFailedException: 잘못된 아이디 또는 비밀번호입니다]
+[2023-01-25 17:07:04:7115860][http-nio-8091-exec-2] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:07:04:7115863][http-nio-8091-exec-2] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:07:07:7118509][http-nio-8091-exec-3] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:07:07:7118510][http-nio-8091-exec-3] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:07:08:7120385][http-nio-8091-exec-4] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:07:08:7120386][http-nio-8091-exec-4] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:07:52:7163550][http-nio-8091-exec-5] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:07:52:7163552][http-nio-8091-exec-5] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:07:52:7164095][http-nio-8091-exec-6] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:07:52:7164096][http-nio-8091-exec-6] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:07:53:7164615][http-nio-8091-exec-8] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:07:53:7164615][http-nio-8091-exec-8] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:08:01:7172590][http-nio-8091-exec-7] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:08:01:7172591][http-nio-8091-exec-7] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:08:50:7221668][http-nio-8091-exec-10] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:08:50:7221668][http-nio-8091-exec-10] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:08:54:7225981][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:08:54:7225982][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:08:58:7230208][http-nio-8091-exec-2] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:08:58:7230208][http-nio-8091-exec-2] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:09:00:7232030][http-nio-8091-exec-3] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:09:00:7232040][http-nio-8091-exec-3] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:09:02:7233781][http-nio-8091-exec-4] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:09:02:7233782][http-nio-8091-exec-4] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:09:09:7241122][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2023-01-25 17:09:09:7241271][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2023-01-25 17:09:17:1010][restartedMain] INFO  c.uni.practice.PracticeApplication - Starting PracticeApplication using Java 11.0.16.1 on spaceui-MacBookPro.local with PID 98633 (/Users/space/edu/restAPI/practice/build/classes/java/main started by leeyounghyun in /Users/space/edu/restAPI/practice)
+[2023-01-25 17:09:17:1012][restartedMain] INFO  c.uni.practice.PracticeApplication - No active profile set, falling back to 1 default profile: "default"
+[2023-01-25 17:09:17:1075][restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/oraclepki.jar
+[2023-01-25 17:09:17:1076][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-01-25 17:09:17:1076][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-01-25 17:09:18:2329][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8091 (http)
+[2023-01-25 17:09:18:2336][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+[2023-01-25 17:09:18:2337][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-01-25 17:09:18:2337][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+[2023-01-25 17:09:18:2390][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-01-25 17:09:18:2390][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1313 ms
+[2023-01-25 17:09:19:2795][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1931fb5c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35a1e64c, org.springframework.security.web.context.SecurityContextPersistenceFilter@39ed12c8, org.springframework.security.web.header.HeaderWriterFilter@58796113, org.springframework.web.filter.CorsFilter@580bbb6f, org.springframework.security.web.authentication.logout.LogoutFilter@1b6b6800, com.uni.practice.exception.jwt.JwtFilter@7eb2c5ad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@500d99ee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a122a76, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@684f3a3c, org.springframework.security.web.session.SessionManagementFilter@7228c3dd, org.springframework.security.web.access.ExceptionTranslationFilter@235213f0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@136153ee]
+[2023-01-25 17:09:19:2802][restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/productimgs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-01-25 17:09:19:2803][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will not secure Ant [pattern='/productimgs/**']
+[2023-01-25 17:09:19:3308][restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+[2023-01-25 17:09:19:3324][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+[2023-01-25 17:09:19:3349][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8091 (http) with context path ''
+[2023-01-25 17:09:19:3361][restartedMain] INFO  c.uni.practice.PracticeApplication - Started PracticeApplication in 3.066 seconds (JVM running for 3.943)
+[2023-01-25 17:09:23:7370][http-nio-8091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-01-25 17:09:23:7372][http-nio-8091-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2023-01-25 17:09:23:7375][http-nio-8091-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+[2023-01-25 17:09:23:7418][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:09:23:7419][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:09:30:14314][http-nio-8091-exec-2] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:09:30:14314][http-nio-8091-exec-2] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:09:32:16169][http-nio-8091-exec-3] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:09:32:16169][http-nio-8091-exec-3] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:09:34:17991][http-nio-8091-exec-4] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:09:34:17991][http-nio-8091-exec-4] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:09:35:19144][http-nio-8091-exec-5] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:09:35:19145][http-nio-8091-exec-5] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:10:10:53862][http-nio-8091-exec-6] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:10:10:53863][http-nio-8091-exec-6] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:14:33:924][restartedMain] INFO  c.uni.practice.PracticeApplication - Starting PracticeApplication using Java 11.0.16.1 on spaceui-MacBookPro.local with PID 99341 (/Users/space/edu/restAPI/practice/build/classes/java/main started by leeyounghyun in /Users/space/edu/restAPI/practice)
+[2023-01-25 17:14:33:926][restartedMain] INFO  c.uni.practice.PracticeApplication - No active profile set, falling back to 1 default profile: "default"
+[2023-01-25 17:14:33:977][restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/oraclepki.jar
+[2023-01-25 17:14:33:977][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-01-25 17:14:33:978][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-01-25 17:14:35:2359][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8091 (http)
+[2023-01-25 17:14:35:2367][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+[2023-01-25 17:14:35:2367][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-01-25 17:14:35:2367][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+[2023-01-25 17:14:35:2428][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-01-25 17:14:35:2429][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1451 ms
+[2023-01-25 17:14:35:3100][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7a7824e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78baf35e, org.springframework.security.web.context.SecurityContextPersistenceFilter@422731ea, org.springframework.security.web.header.HeaderWriterFilter@4afa7727, org.springframework.web.filter.CorsFilter@7cacb45f, org.springframework.security.web.authentication.logout.LogoutFilter@4d0ba96b, com.uni.practice.exception.jwt.JwtFilter@5948ac57, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2885eca9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48a85062, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62c6f0c2, org.springframework.security.web.session.SessionManagementFilter@7ed7bacf, org.springframework.security.web.access.ExceptionTranslationFilter@6b933b71, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2743f4fd]
+[2023-01-25 17:14:35:3108][restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/productimgs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-01-25 17:14:35:3108][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will not secure Ant [pattern='/productimgs/**']
+[2023-01-25 17:14:36:3200][restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+[2023-01-25 17:14:36:3322][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+[2023-01-25 17:14:36:3346][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8091 (http) with context path ''
+[2023-01-25 17:14:36:3575][restartedMain] INFO  c.uni.practice.PracticeApplication - Started PracticeApplication in 3.333 seconds (JVM running for 4.012)
+[2023-01-25 17:14:41:8850][http-nio-8091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-01-25 17:14:41:8852][http-nio-8091-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2023-01-25 17:14:41:8856][http-nio-8091-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+[2023-01-25 17:14:41:8891][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:14:41:8891][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:15:12:570][restartedMain] INFO  c.uni.practice.PracticeApplication - Starting PracticeApplication using Java 11.0.16.1 on spaceui-MacBookPro.local with PID 99437 (/Users/space/edu/restAPI/practice/build/classes/java/main started by leeyounghyun in /Users/space/edu/restAPI/practice)
+[2023-01-25 17:15:12:571][restartedMain] INFO  c.uni.practice.PracticeApplication - No active profile set, falling back to 1 default profile: "default"
+[2023-01-25 17:15:12:604][restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/oraclepki.jar
+[2023-01-25 17:15:12:605][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-01-25 17:15:12:605][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-01-25 17:15:13:1722][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8091 (http)
+[2023-01-25 17:15:13:1729][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+[2023-01-25 17:15:13:1729][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-01-25 17:15:13:1729][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+[2023-01-25 17:15:13:1778][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-01-25 17:15:13:1778][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1173 ms
+[2023-01-25 17:15:14:2391][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@211e2ec5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e92216, org.springframework.security.web.context.SecurityContextPersistenceFilter@72cdc869, org.springframework.security.web.header.HeaderWriterFilter@44dd4069, org.springframework.web.filter.CorsFilter@45ef6c21, org.springframework.security.web.authentication.logout.LogoutFilter@479a5073, com.uni.practice.exception.jwt.JwtFilter@1e81760b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72c96e68, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@184f1d5b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e391b18, org.springframework.security.web.session.SessionManagementFilter@44c0c6ad, org.springframework.security.web.access.ExceptionTranslationFilter@72e14ddb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b41a9cb]
+[2023-01-25 17:15:14:2396][restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/productimgs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-01-25 17:15:14:2397][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will not secure Ant [pattern='/productimgs/**']
+[2023-01-25 17:15:14:2480][restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+[2023-01-25 17:15:14:2595][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+[2023-01-25 17:15:14:2621][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8091 (http) with context path ''
+[2023-01-25 17:15:14:2850][restartedMain] INFO  c.uni.practice.PracticeApplication - Started PracticeApplication in 2.655 seconds (JVM running for 3.329)
+[2023-01-25 17:15:47:36253][http-nio-8091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-01-25 17:15:47:36254][http-nio-8091-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2023-01-25 17:15:47:36261][http-nio-8091-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+[2023-01-25 17:15:48:36279][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:15:48:36280][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:15:49:37439][http-nio-8091-exec-2] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:15:49:37439][http-nio-8091-exec-2] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:18:21:189583][http-nio-8091-exec-5] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:18:21:189592][http-nio-8091-exec-5] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:18:21:189716][http-nio-8091-exec-6] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:18:21:189716][http-nio-8091-exec-6] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:18:21:189719][http-nio-8091-exec-8] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:18:21:189719][http-nio-8091-exec-9] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:18:21:189719][http-nio-8091-exec-10] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:18:21:189719][http-nio-8091-exec-7] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:18:21:189720][http-nio-8091-exec-8] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:18:21:189720][http-nio-8091-exec-10] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:18:21:189720][http-nio-8091-exec-9] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:18:21:189720][http-nio-8091-exec-7] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:18:21:190128][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:18:21:190128][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:18:21:190195][http-nio-8091-exec-2] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:18:21:190196][http-nio-8091-exec-2] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:18:21:190207][http-nio-8091-exec-3] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:18:21:190207][http-nio-8091-exec-3] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:18:22:190290][http-nio-8091-exec-4] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:18:22:190290][http-nio-8091-exec-4] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:18:22:190298][http-nio-8091-exec-5] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:18:22:190298][http-nio-8091-exec-5] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:18:22:190332][http-nio-8091-exec-6] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:18:22:190332][http-nio-8091-exec-6] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:18:54:222680][http-nio-8091-exec-7] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:18:54:222680][http-nio-8091-exec-7] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:19:03:231745][http-nio-8091-exec-10] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:19:03:231745][http-nio-8091-exec-10] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:20:36:325138][http-nio-8091-exec-4] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:20:36:325144][http-nio-8091-exec-4] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:20:41:330056][http-nio-8091-exec-5] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:20:41:330056][http-nio-8091-exec-5] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:20:53:341849][http-nio-8091-exec-6] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:20:53:341850][http-nio-8091-exec-6] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:21:49:398188][http-nio-8091-exec-7] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:21:49:398188][http-nio-8091-exec-7] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:21:50:398378][http-nio-8091-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2023-01-25 17:21:50:398707][http-nio-8091-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2023-01-25 17:21:50:398728][http-nio-8091-exec-7] INFO  c.u.p.member.service.AuthService - [AuthService] Login Start ===================================
+[2023-01-25 17:21:50:398728][http-nio-8091-exec-7] INFO  c.u.p.member.service.AuthService - [AuthService] MemberDto(memberCode=null, memberId=admin, memberName=null, memberPassword=admin, memberRole=null, memberEmail=null, authorities=null)
+[2023-01-25 17:21:50:399252][http-nio-8091-exec-7] INFO  c.u.p.exception.jwt.TokenProvider - [TokenProvider] generateTokenDto Start ===================================
+[2023-01-25 17:21:50:399252][http-nio-8091-exec-7] INFO  c.u.p.exception.jwt.TokenProvider - [TokenProvider] ROLE_ADMIN
+[2023-01-25 17:21:51:399280][http-nio-8091-exec-7] INFO  c.u.p.member.service.AuthService - [AuthService] tokenDto TokenDto(grantType=bearer, memberName=관리자, accessToken=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE2NzQ2MzY3MTB9.iLeuwSKdn_bj63_NR8q-K-1n8dMbtOvKQLnBD7u92QSo8_SlInxmBKKtNi__SgBzyWIvdBZzaESnDi-q5VG72Q, accessTokenExpiresIn=1674636710981)
+[2023-01-25 17:21:51:399289][http-nio-8091-exec-7] INFO  c.u.p.member.service.AuthService - [AuthService] Login End ===================================
+[2023-01-25 17:22:02:410462][http-nio-8091-exec-10] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-25 17:22:02:410463][http-nio-8091-exec-10] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-25 17:22:02:410466][http-nio-8091-exec-10] INFO  c.u.p.member.service.AuthService - [AuthService] Login Start ===================================
+[2023-01-25 17:22:02:410467][http-nio-8091-exec-10] INFO  c.u.p.member.service.AuthService - [AuthService] MemberDto(memberCode=null, memberId=user01, memberName=null, memberPassword=user01, memberRole=null, memberEmail=null, authorities=null)
+[2023-01-25 17:22:02:410560][http-nio-8091-exec-10] INFO  c.u.p.exception.jwt.TokenProvider - [TokenProvider] generateTokenDto Start ===================================
+[2023-01-25 17:22:02:410560][http-nio-8091-exec-10] INFO  c.u.p.exception.jwt.TokenProvider - [TokenProvider] ROLE_USER
+[2023-01-25 17:22:02:410561][http-nio-8091-exec-10] INFO  c.u.p.member.service.AuthService - [AuthService] tokenDto TokenDto(grantType=bearer, memberName=회원01, accessToken=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMDEiLCJhdXRoIjpbIlJPTEVfVVNFUiJdLCJleHAiOjE2NzQ2MzY3MjJ9.8qTIBz3TVoRFhAb6h-DLMnjiw-SlG5Q_tTJtYZZevUbM5BmDkWm-di9oMwdA2GvjfI2SrvjgQIwvM8iVq01HuQ, accessTokenExpiresIn=1674636722282)
+[2023-01-25 17:22:02:410561][http-nio-8091-exec-10] INFO  c.u.p.member.service.AuthService - [AuthService] Login End ===================================
+[2023-01-25 17:36:48:1297001][HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Retrograde clock change detected (housekeeper delta=27s941ms), soft-evicting connections from pool.
