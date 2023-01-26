@@ -4,6 +4,315 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.uni.practice.product.dao.ProductMapper">
 
+<!--  구매가능 여부가 Y인 제품을 제품코드로 조회하기  -->
+    <select id="selectProduct" resultType="ProductDto">
+        SELECT
+            P.PRODUCT_CODE
+             , P.PRODUCT_NAME
+             , P.PRODUCT_PRICE
+             , P.PRODUCT_DISCOUNTED_PRICE
+             , P.PRODUCT_DISCOUNT_RATE
+             , P.PRODUCT_DESCRIPTION
+             , P.PRODUCT_ORDERABLE
+             , C.CATEGORY_CODE
+             , C.CATEGORY_NAME
+             , P.PRODUCT_IMAGE_URL
+             , P.PRODUCT_STOCK
+        FROM TBL_PRODUCT P
+                 JOIN TBL_CATEGORY C
+                      ON (P.CATEGORY_CODE = C.CATEGORY_CODE)
+        WHERE PRODUCT_CODE = #{productCode}
+          AND PRODUCT_ORDERABLE = 'Y'
+        ORDER BY PRODUCT_CODE DESC
+    </select>
 
+    <!--  모든제품을 제품코드로 조회하기  -->
+    <select id="selectProductForAdmin" resultType="ProductDto">
+        SELECT
+            P.PRODUCT_CODE
+             , P.PRODUCT_NAME
+             , P.PRODUCT_PRICE
+             , P.PRODUCT_DISCOUNTED_PRICE
+             , P.PRODUCT_DISCOUNT_RATE
+             , P.PRODUCT_DESCRIPTION
+             , P.PRODUCT_ORDERABLE
+             , C.CATEGORY_CODE
+             , C.CATEGORY_NAME
+             , P.PRODUCT_IMAGE_URL
+             , P.PRODUCT_STOCK
+        FROM TBL_PRODUCT P
+                 JOIN TBL_CATEGORY C
+                      ON (P.CATEGORY_CODE = C.CATEGORY_CODE)
+        WHERE PRODUCT_CODE = #{productCode}
+        ORDER BY PRODUCT_CODE DESC
+    </select>
+
+    <!--  구매가능 여부가 Y인 모든제품 조회하기  -->
+    <select id="selectProductList" resultType="ProductDto">
+        SELECT
+            P.PRODUCT_CODE
+             , P.PRODUCT_NAME
+             , P.PRODUCT_PRICE
+             , P.PRODUCT_DISCOUNTED_PRICE
+             , P.PRODUCT_DISCOUNT_RATE
+             , P.PRODUCT_DESCRIPTION
+             , P.PRODUCT_ORDERABLE
+             , C.CATEGORY_CODE
+             , C.CATEGORY_NAME
+             , P.PRODUCT_IMAGE_URL
+             , P.PRODUCT_STOCK
+        FROM TBL_PRODUCT P
+                 JOIN TBL_CATEGORY C
+                      ON (P.CATEGORY_CODE = C.CATEGORY_CODE)
+        WHERE PRODUCT_ORDERABLE = 'Y'
+        ORDER BY PRODUCT_CODE DESC
+    </select>
+
+    <!--  관리자 제품리스트 페이징 조회하기  -->
+    <select id="selectProductListWithPagingForAdmin" parameterType="ProductDto" resultType="ProductDto">
+        <![CDATA[
+
+        SELECT
+            PRODUCT_CODE
+             , PRODUCT_NAME
+             , PRODUCT_PRICE
+             , PRODUCT_DISCOUNTED_PRICE
+             , PRODUCT_DISCOUNT_RATE
+             , PRODUCT_DESCRIPTION
+             , PRODUCT_ORDERABLE
+             , CATEGORY_CODE
+             , CATEGORY_NAME
+             , PRODUCT_IMAGE_URL
+             , PRODUCT_STOCK
+        FROM(
+                SELECT
+                    ROWNUM AS RN
+                     , P.PRODUCT_CODE
+                     , P.PRODUCT_NAME
+                     , P.PRODUCT_PRICE
+                     , P.PRODUCT_DISCOUNTED_PRICE
+                     , P.PRODUCT_DISCOUNT_RATE
+                     , P.PRODUCT_DESCRIPTION
+                     , P.PRODUCT_ORDERABLE
+                     , P.CATEGORY_CODE
+                     , P.CATEGORY_NAME
+                     , P.PRODUCT_IMAGE_URL
+                     , P.PRODUCT_STOCK
+                FROM (
+                         SELECT
+                             TP.PRODUCT_CODE
+                              , TP.PRODUCT_NAME
+                              , TP.PRODUCT_PRICE
+                              , TP.PRODUCT_DISCOUNTED_PRICE
+                              , TP.PRODUCT_DISCOUNT_RATE
+                              , TP.PRODUCT_DESCRIPTION
+                              , TP.PRODUCT_ORDERABLE
+                              , TC.CATEGORY_CODE
+                              , TC.CATEGORY_NAME
+                              , TP.PRODUCT_IMAGE_URL
+                              , TP.PRODUCT_STOCK
+                         FROM TBL_PRODUCT TP
+                                  JOIN TBL_CATEGORY TC ON (TP.CATEGORY_CODE = TC.CATEGORY_CODE)
+                         ORDER BY TP.PRODUCT_CODE DESC
+                     ) P
+
+            )
+        WHERE RN <= #{ endRow }
+          AND RN >= #{ startRow }
+
+        ]]>
+    </select>
+
+    <!--  구매가능 여부가 Y인 제품리스트 페이징 조회하기  -->
+    <select id="selectProductListWithPaging" parameterType="ProductDto" resultType="ProductDto">
+        <![CDATA[
+
+        SELECT
+            PRODUCT_CODE
+             , PRODUCT_NAME
+             , PRODUCT_PRICE
+             , PRODUCT_DISCOUNTED_PRICE
+             , PRODUCT_DISCOUNT_RATE
+             , PRODUCT_DESCRIPTION
+             , PRODUCT_ORDERABLE
+             , CATEGORY_CODE
+             , CATEGORY_NAME
+             , PRODUCT_IMAGE_URL
+             , PRODUCT_STOCK
+        FROM(
+                SELECT
+                    ROWNUM AS RN
+                     , P.PRODUCT_CODE
+                     , P.PRODUCT_NAME
+                     , P.PRODUCT_PRICE
+                     , P.PRODUCT_DISCOUNTED_PRICE
+                     , P.PRODUCT_DISCOUNT_RATE
+                     , P.PRODUCT_DESCRIPTION
+                     , P.PRODUCT_ORDERABLE
+                     , P.CATEGORY_CODE
+                     , P.CATEGORY_NAME
+                     , P.PRODUCT_IMAGE_URL
+                     , P.PRODUCT_STOCK
+                FROM (
+                         SELECT
+                             TP.PRODUCT_CODE
+                              , TP.PRODUCT_NAME
+                              , TP.PRODUCT_PRICE
+                              , TP.PRODUCT_DISCOUNTED_PRICE
+                              , TP.PRODUCT_DISCOUNT_RATE
+                              , TP.PRODUCT_DESCRIPTION
+                              , TP.PRODUCT_ORDERABLE
+                              , CP.CATEGORY_CODE
+                              , CP.CATEGORY_NAME
+                              , TP.PRODUCT_IMAGE_URL
+                              , TP.PRODUCT_STOCK
+                         FROM TBL_PRODUCT TP
+                                  JOIN TBL_CATEGORY CP ON (TP.CATEGORY_CODE = CP.CATEGORY_CODE)
+                         WHERE PRODUCT_ORDERABLE = 'Y'
+                         ORDER BY TP.PRODUCT_CODE DESC
+                     ) P
+            )
+        WHERE RN <= #{ endRow }
+          AND RN >= #{ startRow }
+
+        ]]>
+    </select>
+
+    <!--  페이지네이션을 위한 제품리스트 개수 조회  -->
+    <select id="selectProductTotal" resultType="int">
+        SELECT
+            count(*)
+        FROM TBL_PRODUCT P
+        JOIN TBL_CATEGORY C
+        ON (P.CATEGORY_CODE = C.CATEGORY_CODE)
+        WHERE PRODUCT_ORDERABLE = 'Y'
+    </select>
+
+    <select id="selectProductTotalForAdmin" resultType="int">
+        SELECT
+            count(*)
+        FROM TBL_PRODUCT P
+                 JOIN TBL_CATEGORY C
+                      ON (P.CATEGORY_CODE = C.CATEGORY_CODE)
+    </select>
+
+    <select id="selectProductListAboutMeal" resultType="ProductDto">
+        SELECT
+            P.PRODUCT_CODE
+             , P.PRODUCT_NAME
+             , P.PRODUCT_PRICE
+             , P.PRODUCT_DESCRIPTION
+             , P.PRODUCT_ORDERABLE
+             , C.CATEGORY_CODE
+             , C.CATEGORY_NAME
+             , P.PRODUCT_IMAGE_URL
+             , P.PRODUCT_STOCK
+        FROM TBL_PRODUCT P
+                 JOIN TBL_CATEGORY C
+                      ON (P.CATEGORY_CODE = C.CATEGORY_CODE)
+        WHERE CATEGORY_NAME = '식사'
+          AND PRODUCT_ORDERABLE = 'Y'
+        ORDER BY PRODUCT_CODE DESC
+    </select>
+
+    <select id="selectProductListAboutDessert" resultType="ProductDto">
+        SELECT
+            P.PRODUCT_CODE
+             , P.PRODUCT_NAME
+             , P.PRODUCT_PRICE
+             , P.PRODUCT_DESCRIPTION
+             , P.PRODUCT_ORDERABLE
+             , C.CATEGORY_CODE
+             , C.CATEGORY_NAME
+             , P.PRODUCT_IMAGE_URL
+             , P.PRODUCT_STOCK
+        FROM TBL_PRODUCT P
+                 JOIN TBL_CATEGORY C
+                      ON (P.CATEGORY_CODE = C.CATEGORY_CODE)
+        WHERE CATEGORY_NAME = '디저트'
+          AND PRODUCT_ORDERABLE = 'Y'
+        ORDER BY PRODUCT_CODE DESC
+    </select>
+
+    <select id="selectProductListAboutBeverage" resultType="ProductDto">
+        SELECT
+            P.PRODUCT_CODE
+             , P.PRODUCT_NAME
+             , P.PRODUCT_PRICE
+             , P.PRODUCT_DESCRIPTION
+             , P.PRODUCT_ORDERABLE
+             , C.CATEGORY_CODE
+             , C.CATEGORY_NAME
+             , P.PRODUCT_IMAGE_URL
+             , P.PRODUCT_STOCK
+        FROM TBL_PRODUCT P
+                 JOIN TBL_CATEGORY C
+                      ON (P.CATEGORY_CODE = C.CATEGORY_CODE)
+        WHERE CATEGORY_NAME = '음료'
+          AND PRODUCT_ORDERABLE = 'Y'
+        ORDER BY PRODUCT_CODE DESC
+    </select>
+
+    <select id="productListWithSearchValue" resultType="ProductDto">
+        SELECT
+            P.PRODUCT_CODE
+             , P.PRODUCT_NAME
+             , P.PRODUCT_PRICE
+             , P.PRODUCT_DESCRIPTION
+             , P.PRODUCT_ORDERABLE
+             , C.CATEGORY_CODE
+             , C.CATEGORY_NAME
+             , P.PRODUCT_IMAGE_URL
+             , P.PRODUCT_STOCK
+        FROM TBL_PRODUCT P
+                 JOIN TBL_CATEGORY C
+                      ON (P.CATEGORY_CODE = C.CATEGORY_CODE)
+        WHERE PRODUCT_NAME LIKE '%' || #{search} || '%'
+          AND PRODUCT_ORDERABLE = 'Y'
+        ORDER BY PRODUCT_CODE DESC
+    </select>
+
+    <!--  제품추가  -->
+    <insert id="insertProduct" parameterType="ProductDto">
+        INSERT INTO TBL_PRODUCT
+        (
+            PRODUCT_CODE
+        , PRODUCT_NAME
+        , PRODUCT_PRICE
+        , PRODUCT_DISCOUNTED_PRICE
+        , PRODUCT_DISCOUNT_RATE
+        , PRODUCT_DESCRIPTION
+        , PRODUCT_ORDERABLE
+        , CATEGORY_CODE
+        , PRODUCT_IMAGE_URL
+        , PRODUCT_STOCK
+        )
+        VALUES
+            (
+                SEQ_PRODUCT_CODE.NEXTVAL
+            , #{productName}
+            , #{productPrice}
+            , #{productDiscountedPrice}
+            , #{productDiscountRate}
+            , #{productDescription}
+            , #{productOrderable}
+            , #{categoryCode}
+            , #{productImageUrl}
+            , #{productStock}
+            )
+    </insert>
+
+    <update id="updateProduct" parameterType="ProductDto">
+        UPDATE TBL_PRODUCT
+        SET
+            PRODUCT_NAME = #{productName},
+            PRODUCT_PRICE = #{productPrice},
+            PRODUCT_DESCRIPTION = #{productDescription},
+            PRODUCT_ORDERABLE = #{productOrderable},
+            CATEGORY_CODE = #{categoryCode},
+            PRODUCT_IMAGE_URL = #{productImageUrl},
+            PRODUCT_STOCK = #{productStock}
+        WHERE PRODUCT_CODE = #{productCode}
+    </update>
 
 </mapper>

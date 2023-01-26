@@ -13,14 +13,14 @@
 
 	<typeAliases>
 		<typeAlias alias="MemberDto" type="com.uni.practice.member.dto.MemberDto"/>
-<!--		<typeAlias alias="ProductDto" type="com.uni.practice.product.dto.ProductDto"/>-->
+		<typeAlias alias="ProductDto" type="com.uni.practice.product.dto.ProductDto"/>
 <!--		<typeAlias alias="PurchaseDto" type="com.uni.practice.purchase.dto.PurchaseDto"/>-->
 <!--		<typeAlias alias="ReviewDto" type="com.uni.practice.review.dto.ReviewDto"/>-->
 	</typeAliases>
 
 	<mappers>
 		<mapper resource="MemberMapper.xml" />
-<!--		<mapper resource="ProductMapper.xml" />-->
+		<mapper resource="ProductMapper.xml" />
 <!--		<mapper resource="PurchaseMapper.xml" />-->
 <!--		<mapper resource="ReviewMapper.xml" />-->
 	</mappers>

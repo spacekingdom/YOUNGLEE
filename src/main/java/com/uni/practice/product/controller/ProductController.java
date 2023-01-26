@@ -28,6 +28,7 @@ public class ProductController {
 
         log.info("[ProductController] selectProductListWithPaging : " + offset);
 
+//      페이지네이션을 위한 모든제품리스트 카운트조회
         int totalCount = productService.selectProductTotal();
         int limit = 10;
         int buttonAmount = 5;
@@ -97,12 +98,13 @@ public class ProductController {
         return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "상품 상세정보 조회 성공",  productService.selectProduct(productCode)));
     }
 
+//  제품 추가
     @PostMapping(value = "/products")
     public ResponseEntity<ResponseDto> insertProduct(@ModelAttribute ProductDto productDto) {
         log.info("[ProductController] PostMapping productDto : " + productDto);
         return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "상품 입력 성공",  productService.insertProduct(productDto)));
     }
-
+//  제품 수정
     @PutMapping(value = "/products")
     public ResponseEntity<ResponseDto> updateProduct(@ModelAttribute ProductDto productDto) {
         log.info("[ProductController]PutMapping productDto : " + productDto);

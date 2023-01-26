@@ -36,9 +36,9 @@ image:
   # ProductService? ??
   #image-dir: src/main/resources/static/productimgs/
   image-dir: /productimgs/
-  #image-url: http://43.200.33.166:8090/productimgs/
-  #image-url: http://192.168.0.24:8090/productimgs/
-  image-url: http://localhost:8090/productimgs/
+  #image-url: http://43.200.33.166:8091/productimgs/
+  #image-url: http://192.168.0.24:8091/productimgs/
+  image-url: http://localhost:8091/productimgs/
 
 # HS512 ????? ??? ??? ??? 512bit, ? 64byte ??? secret key? ??
 # Secret ?? ?? ???? Base64 ? ???? ? ??

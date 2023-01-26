@@ -20,11 +20,12 @@ public class FileUploadUtils {
         Path uploadPath = Paths.get(uploadDir);
 
         if(!Files.exists(uploadPath)) {
+            log.info("11111111111111111111111111111");
             Files.createDirectories(uploadPath);
+            log.info("22222222222222222222222222222");
         }
 
         String replaceFileName = fileName + "." + FilenameUtils.getExtension(multipartFile.getResource().getFilename());
-
         try(InputStream inputStream = multipartFile.getInputStream()) {
             Path filePath = uploadPath.resolve(replaceFileName);
             Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING);
