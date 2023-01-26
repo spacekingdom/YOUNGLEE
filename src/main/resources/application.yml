@@ -23,9 +23,9 @@ spring:
     pathmatch:
       matching-strategy: ant_path_matcher
 
-# ??? ??? ??? ??? ? ??? ?? ??
+# 이미지 저장할 위치와 응답할 때 이미지 주소 세팅
 image:
-  # WebConfig? ??
+  # WebConfig에 세팅
   #add-resource-locations: classpath:/static/productimgs/
   #add-resource-handler: /productimgs/**
 
@@ -33,15 +33,15 @@ image:
   add-resource-handler: /productimgs/**
 
 
-  # ProductService? ??
+  # ProductService에 세팅
   #image-dir: src/main/resources/static/productimgs/
   image-dir: /productimgs/
   #image-url: http://43.200.33.166:8091/productimgs/
   #image-url: http://192.168.0.24:8091/productimgs/
   image-url: http://localhost:8091/productimgs/
 
-# HS512 ????? ??? ??? ??? 512bit, ? 64byte ??? secret key? ??
-# Secret ?? ?? ???? Base64 ? ???? ? ??
+# HS512 알고리즘을 사용할 것이기 때문에 512bit, 즉 64byte 이상의 secret key를 사용
+# Secret 값은 특정 문자열을 Base64 로 인코딩한 값 사용
 jwt:
   secret: dW5pLXJlYWN0LW5naW54LXNwcmluZy1ib290LWp3dC1vcmFjbGUtZG9ja2VyLWVjMi1yZWFjdC1uZ25peC1zcHJpbmctYm9vdC1qd3Qtb3JhY2xlLWRvY2tlci1lYzIK
 

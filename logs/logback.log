@@ -3773,3 +3773,227 @@ java.lang.NullPointerException: null
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2023-01-26 15:41:04:1357933][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2023-01-26 15:41:04:1357959][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2023-01-26 15:41:07:854][restartedMain] INFO  c.uni.practice.PracticeApplication - Starting PracticeApplication using Java 11.0.16.1 on spaceui-MacBookPro.local with PID 78057 (/Users/space/edu/restAPI/practice/build/classes/java/main started by leeyounghyun in /Users/space/edu/restAPI/practice)
+[2023-01-26 15:41:07:856][restartedMain] INFO  c.uni.practice.PracticeApplication - No active profile set, falling back to 1 default profile: "default"
+[2023-01-26 15:41:07:903][restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/oraclepki.jar
+[2023-01-26 15:41:07:904][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-01-26 15:41:07:904][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-01-26 15:41:08:2050][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8091 (http)
+[2023-01-26 15:41:08:2057][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+[2023-01-26 15:41:08:2058][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-01-26 15:41:08:2058][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+[2023-01-26 15:41:08:2108][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-01-26 15:41:08:2108][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1203 ms
+[2023-01-26 15:41:09:2673][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@611ac96, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4236f06, org.springframework.security.web.context.SecurityContextPersistenceFilter@6bdd4b9f, org.springframework.security.web.header.HeaderWriterFilter@52dd165f, org.springframework.web.filter.CorsFilter@4b73c580, org.springframework.security.web.authentication.logout.LogoutFilter@5c959c4c, com.uni.practice.exception.jwt.JwtFilter@5de25a00, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1cd441d9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5dd0e333, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@561c3836, org.springframework.security.web.session.SessionManagementFilter@58cf1fb7, org.springframework.security.web.access.ExceptionTranslationFilter@77cf3493, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a4c72ce]
+[2023-01-26 15:41:09:2676][restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/productimgs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-01-26 15:41:09:2676][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will not secure Ant [pattern='/productimgs/**']
+[2023-01-26 15:41:09:2751][restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+[2023-01-26 15:41:09:2846][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+[2023-01-26 15:41:09:2867][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8091 (http) with context path ''
+[2023-01-26 15:41:09:3093][restartedMain] INFO  c.uni.practice.PracticeApplication - Started PracticeApplication in 2.85 seconds (JVM running for 3.573)
+[2023-01-26 15:41:16:9642][http-nio-8091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-01-26 15:41:16:9642][http-nio-8091-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2023-01-26 15:41:16:9643][http-nio-8091-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[2023-01-26 15:41:16:9654][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] doFilterInternal START ===================================
+[2023-01-26 15:41:16:9654][http-nio-8091-exec-1] INFO  o.s.web.filter.OncePerRequestFilter - [JwtFilter] jwt : null
+[2023-01-26 15:41:16:9694][http-nio-8091-exec-1] INFO  c.u.p.p.c.ProductController - [ProductController] PostMapping productDto : ProductDto(productCode=null, productName=아쵸, productPrice=92000, productDiscountedPrice=49800, productDiscountRate=20, productDescription=벨벳 니티드 퐁퐁 토트백_라이트핑크, productOrderable=Y, categoryCode=2, categoryName=null, productImage=null, productImageUrl=Rectangle 36.png, productStock=999)
+[2023-01-26 15:41:16:9701][http-nio-8091-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2023-01-26 15:41:16:9873][http-nio-8091-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2023-01-26 15:41:16:9880][http-nio-8091-exec-1] INFO  c.u.p.p.service.ProductService - [ProductService] insertProduct Start ===================================
+[2023-01-26 15:41:16:9880][http-nio-8091-exec-1] INFO  c.u.p.p.service.ProductService - [ProductService] productDto : ProductDto(productCode=null, productName=아쵸, productPrice=92000, productDiscountedPrice=49800, productDiscountRate=20, productDescription=벨벳 니티드 퐁퐁 토트백_라이트핑크, productOrderable=Y, categoryCode=2, categoryName=null, productImage=null, productImageUrl=Rectangle 36.png, productStock=999)
+[2023-01-26 15:41:16:9880][http-nio-8091-exec-1] INFO  c.u.p.p.service.ProductService - [ProductService] IMAGE_DIR : /productimgs/
+[2023-01-26 15:41:16:9881][http-nio-8091-exec-1] INFO  c.u.p.p.service.ProductService - [ProductService] imageName : 8e4c0afe77b64d3699ee650a5da69aa0
+[2023-01-26 15:41:16:9881][http-nio-8091-exec-1] INFO  c.uni.practice.util.FileUploadUtils - 11111111111111111111111111111
+[2023-01-26 15:41:16:9882][http-nio-8091-exec-1] INFO  c.u.p.p.service.ProductService - [ProductService] IOException IMAGE_DIR : /productimgs/
+[2023-01-26 15:41:16:9882][http-nio-8091-exec-1] INFO  c.u.p.p.service.ProductService - [ProductService] IOException deleteFile : null
+[2023-01-26 15:41:16:9894][http-nio-8091-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at java.base/sun.nio.fs.UnixPath.normalizeAndCheck(UnixPath.java:75)
+	at java.base/sun.nio.fs.UnixPath.<init>(UnixPath.java:69)
+	at java.base/sun.nio.fs.UnixFileSystem.getPath(UnixFileSystem.java:279)
+	at java.base/java.nio.file.Path.resolve(Path.java:515)
+	at com.uni.practice.util.FileUploadUtils.deleteFile(FileUploadUtils.java:48)
+	at com.uni.practice.product.service.ProductService.insertProduct(ProductService.java:155)
+	at com.uni.practice.product.service.ProductService$$FastClassBySpringCGLIB$$fe633646.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.uni.practice.product.service.ProductService$$EnhancerBySpringCGLIB$$404bba8e.insertProduct(<generated>)
+	at com.uni.practice.product.controller.ProductController.insertProduct(ProductController.java:105)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.uni.practice.exception.jwt.JwtFilter.doFilterInternal(JwtFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[2023-01-26 15:43:30:144134][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2023-01-26 15:43:30:144155][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2023-01-26 15:46:12:516][restartedMain] INFO  c.uni.practice.PracticeApplication - Starting PracticeApplication using Java 11.0.16.1 on spaceui-MacBookPro.local with PID 78759 (/Users/space/edu/restAPI/practice/build/classes/java/main started by leeyounghyun in /Users/space/edu/restAPI/practice)
+[2023-01-26 15:46:12:517][restartedMain] INFO  c.uni.practice.PracticeApplication - No active profile set, falling back to 1 default profile: "default"
+[2023-01-26 15:46:12:549][restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/oraclepki.jar
+[2023-01-26 15:46:12:550][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-01-26 15:46:12:550][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-01-26 15:46:13:1562][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8091 (http)
+[2023-01-26 15:46:13:1569][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+[2023-01-26 15:46:13:1569][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-01-26 15:46:13:1570][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+[2023-01-26 15:46:14:1618][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-01-26 15:46:14:1618][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1068 ms
+[2023-01-26 15:46:14:2180][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@12cba3ea, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56d7f8ac, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c632fbf, org.springframework.security.web.header.HeaderWriterFilter@3a66e18f, org.springframework.web.filter.CorsFilter@7ed53c1d, org.springframework.security.web.authentication.logout.LogoutFilter@5491a785, com.uni.practice.exception.jwt.JwtFilter@315d0f2d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65697b86, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29763dc0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ec62e1f, org.springframework.security.web.session.SessionManagementFilter@4c716df6, org.springframework.security.web.access.ExceptionTranslationFilter@15fc2693, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@602d135b]
+[2023-01-26 15:46:14:2183][restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/productimgs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-01-26 15:46:14:2183][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will not secure Ant [pattern='/productimgs/**']
+[2023-01-26 15:46:14:2258][restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+[2023-01-26 15:46:14:2352][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+[2023-01-26 15:46:14:2374][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8091 (http) with context path ''
+[2023-01-26 15:46:15:2595][restartedMain] INFO  c.uni.practice.PracticeApplication - Started PracticeApplication in 2.416 seconds (JVM running for 2.991)
+[2023-01-26 16:04:39:531][restartedMain] INFO  c.uni.practice.PracticeApplication - Starting PracticeApplication using Java 11.0.16.1 on spaceui-MacBookPro.local with PID 81317 (/Users/space/edu/restAPI/practice/build/classes/java/main started by leeyounghyun in /Users/space/edu/restAPI/practice)
+[2023-01-26 16:04:39:533][restartedMain] INFO  c.uni.practice.PracticeApplication - No active profile set, falling back to 1 default profile: "default"
+[2023-01-26 16:04:39:567][restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/oraclepki.jar
+[2023-01-26 16:04:39:568][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-01-26 16:04:39:568][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-01-26 16:04:41:1710][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8091 (http)
+[2023-01-26 16:04:41:1717][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+[2023-01-26 16:04:41:1717][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-01-26 16:04:41:1717][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+[2023-01-26 16:04:41:1767][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-01-26 16:04:41:1767][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1198 ms
+[2023-01-26 16:04:41:2317][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@28dd35e7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b1f494f, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e7fbfa5, org.springframework.security.web.header.HeaderWriterFilter@290b3d25, org.springframework.web.filter.CorsFilter@33a022bc, org.springframework.security.web.authentication.logout.LogoutFilter@1c33d352, com.uni.practice.exception.jwt.JwtFilter@218d32ee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c923642, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c865775, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60be5935, org.springframework.security.web.session.SessionManagementFilter@329ae32e, org.springframework.security.web.access.ExceptionTranslationFilter@b6f2f0d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6d49e39c]
+[2023-01-26 16:04:41:2322][restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/productimgs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-01-26 16:04:41:2322][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will not secure Ant [pattern='/productimgs/**']
+[2023-01-26 16:04:41:2395][restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+[2023-01-26 16:04:41:2488][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+[2023-01-26 16:04:41:2509][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8091 (http) with context path ''
+[2023-01-26 16:04:42:2716][restartedMain] INFO  c.uni.practice.PracticeApplication - Started PracticeApplication in 2.535 seconds (JVM running for 3.122)
+[2023-01-26 16:05:17:530][restartedMain] INFO  c.uni.practice.PracticeApplication - Starting PracticeApplication using Java 11.0.16.1 on spaceui-MacBookPro.local with PID 81415 (/Users/space/edu/restAPI/practice/build/classes/java/main started by leeyounghyun in /Users/space/edu/restAPI/practice)
+[2023-01-26 16:05:17:531][restartedMain] INFO  c.uni.practice.PracticeApplication - No active profile set, falling back to 1 default profile: "default"
+[2023-01-26 16:05:17:562][restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/oraclepki.jar
+[2023-01-26 16:05:17:562][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-01-26 16:05:17:562][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-01-26 16:05:18:1559][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8091 (http)
+[2023-01-26 16:05:18:1565][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+[2023-01-26 16:05:18:1566][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-01-26 16:05:18:1566][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+[2023-01-26 16:05:18:1611][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-01-26 16:05:18:1611][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1049 ms
+[2023-01-26 16:05:19:2160][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@51f57431, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62a22416, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d30aeba, org.springframework.security.web.header.HeaderWriterFilter@1010f6c, org.springframework.web.filter.CorsFilter@3f6e381e, org.springframework.security.web.authentication.logout.LogoutFilter@7801b4b8, com.uni.practice.exception.jwt.JwtFilter@1ba1ce5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@21930731, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b3951a5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b94b41f, org.springframework.security.web.session.SessionManagementFilter@46cc3ecb, org.springframework.security.web.access.ExceptionTranslationFilter@acc7571, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a6121d0]
+[2023-01-26 16:05:19:2163][restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/productimgs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-01-26 16:05:19:2163][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will not secure Ant [pattern='/productimgs/**']
+[2023-01-26 16:05:19:2257][restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+[2023-01-26 16:05:19:2366][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+[2023-01-26 16:05:19:2389][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8091 (http) with context path ''
+[2023-01-26 16:05:19:2616][restartedMain] INFO  c.uni.practice.PracticeApplication - Started PracticeApplication in 2.431 seconds (JVM running for 3.099)
+[2023-01-26 16:05:38:539][restartedMain] INFO  c.uni.practice.PracticeApplication - Starting PracticeApplication using Java 11.0.16.1 on spaceui-MacBookPro.local with PID 81466 (/Users/space/edu/restAPI/practice/build/classes/java/main started by leeyounghyun in /Users/space/edu/restAPI/practice)
+[2023-01-26 16:05:38:540][restartedMain] INFO  c.uni.practice.PracticeApplication - No active profile set, falling back to 1 default profile: "default"
+[2023-01-26 16:05:38:570][restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/Users/space/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/21.5.0.0/eb13f0948ca8675f71d59b5e8a1129d4c6189e7a/oraclepki.jar
+[2023-01-26 16:05:38:570][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2023-01-26 16:05:38:570][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2023-01-26 16:05:39:1613][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8091 (http)
+[2023-01-26 16:05:39:1620][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+[2023-01-26 16:05:39:1620][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2023-01-26 16:05:39:1620][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+[2023-01-26 16:05:39:1673][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2023-01-26 16:05:39:1673][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1103 ms
+[2023-01-26 16:05:40:2221][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6ed44049, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28d58771, org.springframework.security.web.context.SecurityContextPersistenceFilter@290b3d25, org.springframework.security.web.header.HeaderWriterFilter@15dcca6b, org.springframework.web.filter.CorsFilter@1cd1e00b, org.springframework.security.web.authentication.logout.LogoutFilter@7b85f1d3, com.uni.practice.exception.jwt.JwtFilter@602d135b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@329ae32e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5374810f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c37c11f, org.springframework.security.web.session.SessionManagementFilter@39aa16f1, org.springframework.security.web.access.ExceptionTranslationFilter@dd64927, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@872a65b]
+[2023-01-26 16:05:40:2226][restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/productimgs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2023-01-26 16:05:40:2226][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will not secure Ant [pattern='/productimgs/**']
+[2023-01-26 16:05:40:2302][restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+[2023-01-26 16:05:40:2396][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+[2023-01-26 16:05:40:2417][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8091 (http) with context path ''
+[2023-01-26 16:05:40:2656][restartedMain] INFO  c.uni.practice.PracticeApplication - Started PracticeApplication in 2.463 seconds (JVM running for 3.117)
