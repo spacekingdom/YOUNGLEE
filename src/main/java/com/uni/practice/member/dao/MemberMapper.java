@@ -17,4 +17,8 @@ public interface MemberMapper {
     Optional<MemberDto> findByMemberId(String memberId);
 
     MemberDto selectByMemberId(String memberId);
+
+    int updateMember(MemberDto memberDto);
+
+    int deleteMember(String memberId);
 }
