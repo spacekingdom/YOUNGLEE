@@ -82,6 +82,7 @@ public class SecurityConfig  {
                 .antMatchers("/api/v1/products/**").permitAll()// 제품 누구나 접근가능
                 .antMatchers("/api/v1/reviews/**").permitAll()// 리뷰도 누구나 접근가능
                 .antMatchers("/api/**").hasAnyRole("USER", "ADMIN")  // 나머지 API 는 전부 인증 필요
+                .antMatchers("/api/v1/products-management/**").hasAnyRole("ADMIN")  // 관리자만접근
                 .and()
                 .cors()
                  .and()

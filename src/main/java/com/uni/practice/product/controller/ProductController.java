@@ -23,6 +23,7 @@ public class ProductController {
         this.productService = productService;
     }
 
+//  회원 제품조회
     @GetMapping("/products")
     public ResponseEntity<ResponseDto> selectProductListWithPaging(@RequestParam(name="offset", defaultValue="1") String offset) {
 
@@ -43,6 +44,7 @@ public class ProductController {
         return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "조회 성공", responseDtoWithPaging));
     }
 
+//  관리자 제품조회
     @GetMapping("/products-management")
     public ResponseEntity<ResponseDto> selectProductListWithPagingForAdmin(@RequestParam(name="offset", defaultValue="1") String offset) {
 
@@ -62,54 +64,77 @@ public class ProductController {
         return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "조회 성공", responseDtoWithPaging));
     }
 
+//  관리자 제품코드로 제품조회
     @GetMapping("/products-management/{productCode}")
-    public ResponseEntity<ResponseDto> selectProductDetailForAdmin(@PathVariable String productCode) {
+    public ResponseEntity<ResponseDto> selectProductDetailForAdmin(@PathVariable Long productCode) {
 
         return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "상품 상세정보 조회 성공",  productService.selectProductForAdmin(productCode)));
     }
 
-    @GetMapping("/products/meals")
-    public ResponseEntity<ResponseDto> selectProductListAboutMeal() {
+//  outer 조회
+    @GetMapping("/products/outer")
+    public ResponseEntity<ResponseDto> selectProductListAboutOuter() {
 
-        return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "조회 성공",  productService.selectProductListAboutMeal()));
+        return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "조회 성공",  productService.selectProductListAboutOuter()));
     }
 
-    @GetMapping("/products/dessert")
-    public ResponseEntity<ResponseDto> selectProductListAboutDessert() {
+//  bag  조회
+    @GetMapping("/products/bag")
+    public ResponseEntity<ResponseDto> selectProductListAboutBag() {
 
-        return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "조회 성공",  productService.selectProductListAboutDessert()));
+        return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "조회 성공",  productService.selectProductListAboutBag()));
     }
 
-    @GetMapping("/products/beverage")
-    public ResponseEntity<ResponseDto> selectProductListAboutBeverage() {
+//  pants  조회
+    @GetMapping("/products/pants")
+    public ResponseEntity<ResponseDto> selectProductListAboutPants() {
 
-        return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "조회 성공",  productService.selectProductListAboutBeverage()));
+        return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "조회 성공",  productService.selectProductListAboutPants()));
     }
 
+//  top 조회
+    @GetMapping("/products/top")
+    public ResponseEntity<ResponseDto> selectProductListAboutTop() {
+
+        return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "조회 성공",  productService.selectProductListAboutTop()));
+    }
+
+//  etc 조회
+    @GetMapping("/products/etc")
+    public ResponseEntity<ResponseDto> selectProductListAboutEtc() {
+
+        return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "조회 성공",  productService.selectProductListAboutEtc()));
+    }
+
+//  상품 검색
     @GetMapping("/products/search")
     public ResponseEntity<ResponseDto> selectSearchList(@RequestParam(name="s", defaultValue="all") String search) {
-
         return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "조회 성공",  productService.selectSearchProductList(search)));
     }
 
+//  상품 상세정보 조회
     @GetMapping("/products/{productCode}")
     public ResponseEntity<ResponseDto> selectProductDetail(@PathVariable String productCode) {
 
         return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "상품 상세정보 조회 성공",  productService.selectProduct(productCode)));
     }
 
-//  제품 추가
-    @PostMapping(value = "/products")
+//  상품 등록
+    @PostMapping(value = "/products-management")
     public ResponseEntity<ResponseDto> insertProduct(@ModelAttribute ProductDto productDto) {
         log.info("[ProductController] PostMapping productDto : " + productDto);
-        return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "상품 입력 성공",  productService.insertProduct(productDto)));
+        return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "상품 등록 성공",  productService.insertProduct(productDto)));
     }
-//  제품 수정
-    @PutMapping(value = "/products")
+//  상품 수정
+    @PutMapping(value = "/products-management")
     public ResponseEntity<ResponseDto> updateProduct(@ModelAttribute ProductDto productDto) {
         log.info("[ProductController]PutMapping productDto : " + productDto);
 
         return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "상품 업데이트 성공",  productService.updateProduct(productDto)));
     }
-
+//  상품 삭제
+    @DeleteMapping(value = "/products-management/{productCode}")
+    public ResponseEntity<ResponseDto> deleteProduct(@PathVariable Long productCode){
+        return ResponseEntity.ok().body(new ResponseDto(HttpStatus.OK, "상품 삭제 성공",  productService.deleteProduct(productCode)));
+    }
 }

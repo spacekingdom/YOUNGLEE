@@ -68,7 +68,7 @@ public class ProductService {
     }
 
 
-    public Object selectProductForAdmin(String productCode) {
+    public Object selectProductForAdmin(Long productCode) {
         log.info("[ProductService] selectProductForAdmin Start ===================================");
         ProductDto productDto = productMapper.selectProductForAdmin(productCode);
         productDto.setProductImageUrl(IMAGE_URL + productDto.getProductImageUrl());
@@ -160,47 +160,76 @@ public class ProductService {
     }
 
 
-    public List<ProductDto> selectProductListAboutMeal() {
-        log.info("[ProductService] selectProductListAboutMeal Start ===================================");
+    public List<ProductDto> selectProductListAboutOuter() {
+        log.info("[ProductService] selectProductListAboutOuter Start ===================================");
 
-        List<ProductDto> productListAboutMeal = productMapper.selectProductListAboutMeal();
+        List<ProductDto> productListAboutOuter = productMapper.selectProductListAboutOuter();
 
-        for(int i = 0 ; i < productListAboutMeal.size() ; i++) {
-            productListAboutMeal.get(i).setProductImageUrl(IMAGE_URL + productListAboutMeal.get(i).getProductImageUrl());
+        for(int i = 0 ; i < productListAboutOuter.size() ; i++) {
+            productListAboutOuter.get(i).setProductImageUrl(IMAGE_URL + productListAboutOuter.get(i).getProductImageUrl());
         }
 
-        log.info("[ProductService] selectProductListAboutMeal End ==============================");
+        log.info("[ProductService] selectProductListAboutOuter End ==============================");
 
-        return productListAboutMeal;
+        return productListAboutOuter;
     }
 
-    public List<ProductDto> selectProductListAboutDessert() {
-        log.info("[ProductService] selectProductListAboutDessert Start ===================================");
+    public List<ProductDto> selectProductListAboutBag() {
+        log.info("[ProductService] selectProductListAboutBag Start ===================================");
 
-        List<ProductDto> productListAboutDessert = productMapper.selectProductListAboutDessert();
+        List<ProductDto> productListAboutBag = productMapper.selectProductListAboutBag();
 
-        for(int i = 0 ; i < productListAboutDessert.size() ; i++) {
-            productListAboutDessert.get(i).setProductImageUrl(IMAGE_URL + productListAboutDessert.get(i).getProductImageUrl());
+        for(int i = 0 ; i < productListAboutBag.size() ; i++) {
+            productListAboutBag.get(i).setProductImageUrl(IMAGE_URL + productListAboutBag.get(i).getProductImageUrl());
         }
 
-        log.info("[ProductService] selectProductListAboutDessert End ==============================");
+        log.info("[ProductService] selectProductListAboutBag End ==============================");
 
-        return productListAboutDessert;
+        return productListAboutBag;
     }
 
-    public List<ProductDto> selectProductListAboutBeverage() {
+    public List<ProductDto> selectProductListAboutPants() {
 
-        log.info("[ProductService] selectProductListAboutBeverage Start ===================================");
+        log.info("[ProductService] selectProductListAboutPants Start ===================================");
 
-        List<ProductDto> productListAboutBeverage = productMapper.selectProductListAboutBeverage();
+        List<ProductDto> productListAboutPants = productMapper.selectProductListAboutPants();
 
-        for(int i = 0 ; i < productListAboutBeverage.size() ; i++) {
-            productListAboutBeverage.get(i).setProductImageUrl(IMAGE_URL + productListAboutBeverage.get(i).getProductImageUrl());
+        for(int i = 0 ; i < productListAboutPants.size() ; i++) {
+            productListAboutPants.get(i).setProductImageUrl(IMAGE_URL + productListAboutPants.get(i).getProductImageUrl());
         }
 
-        log.info("[ProductService] selectProductListAboutBeverage End ==============================");
+        log.info("[ProductService] selectProductListAboutPants End ==============================");
 
-        return productListAboutBeverage;
+        return productListAboutPants;
+    }
+    public List<ProductDto> selectProductListAboutTop() {
+
+        log.info("[ProductService] selectProductListAboutTop Start ===================================");
+
+        List<ProductDto> productListAboutTop = productMapper.selectProductListAboutTop();
+
+        for(int i = 0 ; i < productListAboutTop.size() ; i++) {
+            productListAboutTop.get(i).setProductImageUrl(IMAGE_URL + productListAboutTop.get(i).getProductImageUrl());
+        }
+
+        log.info("[ProductService] selectProductListAboutTop End ==============================");
+
+        return productListAboutTop;
+    }
+
+    public List<ProductDto> selectProductListAboutEtc() {
+
+        log.info("[ProductService] selectProductListAboutEtc Start ===================================");
+
+        List<ProductDto> productListAboutEtc = productMapper.selectProductListAboutEtc();
+
+        for(int i = 0 ; i < productListAboutEtc.size() ; i++) {
+            productListAboutEtc.get(i).setProductImageUrl(IMAGE_URL + productListAboutEtc.get(i).getProductImageUrl());
+        }
+
+        log.info("[ProductService] selectProductListAboutEtc End ==============================");
+
+        return productListAboutEtc;
     }
 
 
@@ -219,5 +248,8 @@ public class ProductService {
     }
 
 
+    public Long deleteProduct(Long productCode) {
+        return productMapper.deleteProduct(productCode);
+    }
 
 }

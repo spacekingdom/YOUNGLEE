@@ -26,7 +26,7 @@
         ORDER BY PRODUCT_CODE DESC
     </select>
 
-    <!--  모든제품을 제품코드로 조회하기  -->
+    <!--  관리자 모든제품을 제품코드로 조회하기  -->
     <select id="selectProductForAdmin" resultType="ProductDto">
         SELECT
             P.PRODUCT_CODE
@@ -196,11 +196,13 @@
                       ON (P.CATEGORY_CODE = C.CATEGORY_CODE)
     </select>
 
-    <select id="selectProductListAboutMeal" resultType="ProductDto">
+    <select id="selectProductListAboutOuter" resultType="ProductDto">
         SELECT
             P.PRODUCT_CODE
              , P.PRODUCT_NAME
              , P.PRODUCT_PRICE
+             , P.PRODUCT_DISCOUNTED_PRICE
+             , P.PRODUCT_DISCOUNT_RATE
              , P.PRODUCT_DESCRIPTION
              , P.PRODUCT_ORDERABLE
              , C.CATEGORY_CODE
@@ -210,16 +212,18 @@
         FROM TBL_PRODUCT P
                  JOIN TBL_CATEGORY C
                       ON (P.CATEGORY_CODE = C.CATEGORY_CODE)
-        WHERE CATEGORY_NAME = '식사'
+        WHERE CATEGORY_NAME = 'OUTER'
           AND PRODUCT_ORDERABLE = 'Y'
         ORDER BY PRODUCT_CODE DESC
     </select>
 
-    <select id="selectProductListAboutDessert" resultType="ProductDto">
+    <select id="selectProductListAboutBag" resultType="ProductDto">
         SELECT
             P.PRODUCT_CODE
              , P.PRODUCT_NAME
              , P.PRODUCT_PRICE
+             , P.PRODUCT_DISCOUNTED_PRICE
+             , P.PRODUCT_DISCOUNT_RATE
              , P.PRODUCT_DESCRIPTION
              , P.PRODUCT_ORDERABLE
              , C.CATEGORY_CODE
@@ -229,16 +233,18 @@
         FROM TBL_PRODUCT P
                  JOIN TBL_CATEGORY C
                       ON (P.CATEGORY_CODE = C.CATEGORY_CODE)
-        WHERE CATEGORY_NAME = '디저트'
+        WHERE CATEGORY_NAME = 'BAG'
           AND PRODUCT_ORDERABLE = 'Y'
         ORDER BY PRODUCT_CODE DESC
     </select>
 
-    <select id="selectProductListAboutBeverage" resultType="ProductDto">
+    <select id="selectProductListAboutPants" resultType="ProductDto">
         SELECT
             P.PRODUCT_CODE
              , P.PRODUCT_NAME
              , P.PRODUCT_PRICE
+             , P.PRODUCT_DISCOUNTED_PRICE
+             , P.PRODUCT_DISCOUNT_RATE
              , P.PRODUCT_DESCRIPTION
              , P.PRODUCT_ORDERABLE
              , C.CATEGORY_CODE
@@ -248,7 +254,49 @@
         FROM TBL_PRODUCT P
                  JOIN TBL_CATEGORY C
                       ON (P.CATEGORY_CODE = C.CATEGORY_CODE)
-        WHERE CATEGORY_NAME = '음료'
+        WHERE CATEGORY_NAME = 'PANTS'
+          AND PRODUCT_ORDERABLE = 'Y'
+        ORDER BY PRODUCT_CODE DESC
+    </select>
+
+    <select id="selectProductListAboutTop" resultType="ProductDto">
+        SELECT
+            P.PRODUCT_CODE
+             , P.PRODUCT_NAME
+             , P.PRODUCT_PRICE
+             , P.PRODUCT_DISCOUNTED_PRICE
+             , P.PRODUCT_DISCOUNT_RATE
+             , P.PRODUCT_DESCRIPTION
+             , P.PRODUCT_ORDERABLE
+             , C.CATEGORY_CODE
+             , C.CATEGORY_NAME
+             , P.PRODUCT_IMAGE_URL
+             , P.PRODUCT_STOCK
+        FROM TBL_PRODUCT P
+                 JOIN TBL_CATEGORY C
+                      ON (P.CATEGORY_CODE = C.CATEGORY_CODE)
+        WHERE CATEGORY_NAME = 'TOP'
+          AND PRODUCT_ORDERABLE = 'Y'
+        ORDER BY PRODUCT_CODE DESC
+    </select>
+
+    <select id="selectProductListAboutEtc" resultType="ProductDto">
+        SELECT
+            P.PRODUCT_CODE
+             , P.PRODUCT_NAME
+             , P.PRODUCT_PRICE
+             , P.PRODUCT_DISCOUNTED_PRICE
+             , P.PRODUCT_DISCOUNT_RATE
+             , P.PRODUCT_DESCRIPTION
+             , P.PRODUCT_ORDERABLE
+             , C.CATEGORY_CODE
+             , C.CATEGORY_NAME
+             , P.PRODUCT_IMAGE_URL
+             , P.PRODUCT_STOCK
+        FROM TBL_PRODUCT P
+                 JOIN TBL_CATEGORY C
+                      ON (P.CATEGORY_CODE = C.CATEGORY_CODE)
+        WHERE CATEGORY_NAME = 'ETC'
           AND PRODUCT_ORDERABLE = 'Y'
         ORDER BY PRODUCT_CODE DESC
     </select>
@@ -258,6 +306,8 @@
             P.PRODUCT_CODE
              , P.PRODUCT_NAME
              , P.PRODUCT_PRICE
+             , P.PRODUCT_DISCOUNTED_PRICE
+             , P.PRODUCT_DISCOUNT_RATE
              , P.PRODUCT_DESCRIPTION
              , P.PRODUCT_ORDERABLE
              , C.CATEGORY_CODE
@@ -307,6 +357,8 @@
         SET
             PRODUCT_NAME = #{productName},
             PRODUCT_PRICE = #{productPrice},
+            PRODUCT_DISCOUNTED_PRICE = #{productDiscountedPrice},
+            PRODUCT_DISCOUNT_RATE = #{productDiscountRate},
             PRODUCT_DESCRIPTION = #{productDescription},
             PRODUCT_ORDERABLE = #{productOrderable},
             CATEGORY_CODE = #{categoryCode},
@@ -314,5 +366,10 @@
             PRODUCT_STOCK = #{productStock}
         WHERE PRODUCT_CODE = #{productCode}
     </update>
+
+    <delete id="deleteProduct" parameterType="Long">
+        DELETE TBL_PRODUCT
+        WHERE PRODUCT_CODE = #{productCode}
+    </delete>
 
 </mapper>

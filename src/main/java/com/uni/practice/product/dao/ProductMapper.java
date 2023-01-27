@@ -11,11 +11,15 @@ public interface ProductMapper {
 
     ProductDto selectProduct(String productCode);
 
-    List<ProductDto> selectProductListAboutMeal();
+    List<ProductDto> selectProductListAboutOuter();
 
-    List<ProductDto> selectProductListAboutDessert();
+    List<ProductDto> selectProductListAboutBag();
 
-    List<ProductDto> selectProductListAboutBeverage();
+    List<ProductDto> selectProductListAboutPants();
+
+    List<ProductDto> selectProductListAboutTop();
+
+    List<ProductDto> selectProductListAboutEtc();
 
 
     int insertProduct(ProductDto product);
@@ -24,7 +28,7 @@ public interface ProductMapper {
 
     List<ProductDto> productListWithSearchValue(String search);
 
-    ProductDto selectProductForAdmin(String productCode);
+    ProductDto selectProductForAdmin(Long productCode);
 
     int selectProductTotal();
 
@@ -33,4 +37,7 @@ public interface ProductMapper {
     int selectProductTotalForAdmin();
 
     List<ProductDto> selectProductListWithPagingForAdmin(SelectCriteria selectCriteria);
+
+    Long deleteProduct(Long productCode);
+
 }
